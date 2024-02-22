@@ -51,12 +51,9 @@ if($admin=="")
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="dashboard.php?option=update_password">Update Password</a></li>
-            <li><a href="dashboard.php?option=feedback">Feedback</a></li>
-            <li><a href="dashboard.php?option=rooms">Room</a></li>
-			<li><a href="dashboard.php?option=booking_details">Booking Details</a></li>
-      <li><a href="dashboard.php?option=user_registration">User Registration</a></li>
-			<li><a href="dashboard.php?option=slider">Slider</a></li>
+            <li><a href="dashboard.php?option=booking_form">حجز جديد</a></li>
+            <li><a href="dashboard.php?option=rooms">الغرف</a></li>
+			<li><a href="dashboard.php?option=booking_details">الحجوزات</a></li>
       <!---<li><a href="#">Payment</a></li>
 			<li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Setting <span class="caret"></span></a>
@@ -72,7 +69,7 @@ if($admin=="")
 @$opt=$_GET['option'];
 if($opt=="")
 {
-include('reports.php');	
+include('booking_form.php');	
 }
 else
 {
@@ -125,6 +122,10 @@ else
   else if($opt=="admin_profile")
   {
     include('admin_profile.php');
+  }
+  else if($opt=="booking_form")
+  {
+    include('booking_form.php');
   }
 }
 ?>

@@ -1,7 +1,0 @@
-Step 1: Create a database Name "hotel"
-Step 2: Import hotel.sql from database folder.
-Step 3: if u want to chage database connetion update database detials in connection.php
-
-Admin Login
-User Name: adminakshay@gmail.com
-Password: 1234

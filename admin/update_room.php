@@ -16,25 +16,25 @@ header('location:dashboard.php?option=rooms');
 <table class="table table-bordered">
 	
 	<tr>	
-		<th>Room No</th>
+		<th>رقم الغرفة</th>
 		<td><input type="text"  name="rno" value="<?php echo $res['room_no']; ?>"  class="form-control"/>
 		</td>
 	</tr>
 	
 	<tr>	
-		<th>Room Type</th>
+		<th>نوع الغرفة</th>
 		<td><input type="text" name="type" value="<?php echo $res['type']; ?>"  class="form-control"/>
 		</td>
 	</tr>
 	
 	<tr>	
-		<th>Price</th>
+		<th>السعر</th>
 		<td><input type="text" name="price"  value="<?php echo $res['price']; ?>" class="form-control"/>
 		</td>
 	</tr>
 	
 	<tr>	
-		<th>Details</th>
+		<th>البيانات</th>
 		<td><textarea name="details"  class="form-control"><?php echo $res['details']; ?></textarea>
 		</td>
 	</tr>
@@ -42,7 +42,7 @@ header('location:dashboard.php?option=rooms');
 	
 	<tr>
 		<td colspan="2">
-			<input type="submit" class="btn btn-primary" value="Update Room Details" name="update"/>
+			<input type="submit" class="btn btn-primary" value="تعديل" name="update"/>
 		</td>
 	</tr>
 </table> 

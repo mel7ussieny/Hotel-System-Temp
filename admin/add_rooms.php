@@ -1,4 +1,5 @@
 <?php 
+require('../connection.php');
 if(isset($add))
 {
 	$sql=mysqli_query($con,"select * from rooms where room_no='$rno'");
@@ -20,30 +21,30 @@ if(isset($add))
 <table class="table table-bordered">
 	
 	<tr>	
-		<th>Room No</th>
+		<th>رقم الغرفة</th>
 		<td><input type="text" name="rno"  class="form-control"/>
 		</td>
 	</tr>
 	
 	<tr>	
-		<th>Room Type</th>
+		<th>نوع الغرفة</th>
 		<td><input type="text" name="type"  class="form-control"/>
 		</td>
 	</tr>
 	
 	<tr>	
-		<th>Price</th>
+		<th>السعر</th>
 		<td><input type="text" name="price"  class="form-control"/>
 		</td>
 	</tr>
 	
 	<tr>	
-		<th>Details</th>
+		<th>البيانات</th>
 		<td><textarea name="details"  class="form-control"></textarea>
 		</td>
 	</tr>
 	
-	<tr>	
+	<tr style="display:none">	
 		<th>Images</th>
 		<td><input type="file" name="img"  class="form-control"/>
 		</td>
@@ -51,7 +52,7 @@ if(isset($add))
 	
 	<tr>
 		<td colspan="2">
-			<input type="submit" class="btn btn-primary" value="Add Room Details" name="add"/>
+			<input type="submit" class="btn btn-primary" value="إضافة الغرفة" name="add"/>
 		</td>
 	</tr>
 </table> 

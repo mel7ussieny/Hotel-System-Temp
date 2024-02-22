@@ -8,21 +8,22 @@
 	}
 </script>
 <table class="table table-bordered table-striped table-hover">
-	<h1>Room Details</h1><hr>
+	<h1>بيانات الغرف</h1><hr>
 	<tr>
-	<td colspan="8"><a href="dashboard.php?option=add_rooms" class="btn btn-primary">Add New Rooms</a></td>
+	<td colspan="8"><a href="dashboard.php?option=add_rooms" class="btn btn-primary">إضافة غرفة</a></td>
 	</tr>
 	<tr style="height:40">
 		<th>Sr No</th>
-		<th>Image</th>
-		<th>Room No</th>
-		<th>Type</th>
-		<th>Price</th>
-		<th>Details</th>
-		<th>Update</th>
-		<th>Delete</th>
+		<!-- <th>Image</th> -->
+		<th>رقم الغرفة</th>
+		<th>نوع</th>
+		<th>سعر</th>
+		<th>بيانات</th>
+		<th>تعديل</th>
+		<th>حذف</th>
 	</tr>
 <?php 
+require('../connection.php');
 $i=1;
 $sql=mysqli_query($con,"select * from rooms");
 while($res=mysqli_fetch_assoc($sql))
@@ -33,7 +34,7 @@ $path="../image/rooms/$img";
 ?>
 <tr>
 		<td><?php echo $i;$i++; ?></td>
-		<td><img src="<?php echo $path;?>" width="50" height="50"/></td>
+		<!-- <td><img src="<?php echo $path;?>" width="50" height="50"/></td> -->
 		<td><?php echo $res['room_no']; ?></td>
 		<td><?php echo $res['type']; ?></td>
 		<td><?php echo $res['price']; ?></td>

@@ -3,16 +3,16 @@
 	<h1>Room Booking Details</h1><hr>
 	<tr>
 		<th>Sr No</th>
-		<th>Name</th>
-		<th>Email</th>
-		<th>Mobile Number</th>
-		<th>Address</th>
-		<th>Room Type</th>
-		<th>Check in Date</th>
-		<th>Check Out Time</th>
-		<th>Check Out Date</th>
-		<th>Occupancy</th>
-		<th>Cancel Order</th>
+		<th>الأسم</th>
+		<th>رقم الإقامة / الجواز</th>
+		<th>الهاتف</th>
+		<th>العنوان</th>
+		<th>غرفة رقم</th>
+		<th>معاد الدخول</th>
+		<th>وقت الدخول</th>
+		<th>معاد الخروج</th>
+		<th>نوع الغرفة</th>
+		<th>الغاء الحجز</th>
 	</tr>
 
 <?php 
@@ -29,7 +29,7 @@ $oid=$res['id'];
 		<td><?php echo $res['email']; ?></td>
 		<td><?php echo $res['phone']; ?></td>
 		<td><?php echo $res['address']; ?></td>
-		<td><?php echo $res['room_type']; ?></td>
+		<td><?php echo $res['room_id']; ?></td>
 		<td><?php echo $res['check_in_date']; ?></td>
 		<td><?php echo $res['check_in_time']; ?></td>
 		<td><?php echo $res['check_out_date']; ?></td>
